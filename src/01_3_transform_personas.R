@@ -1334,6 +1334,7 @@ personas <- read_rds(here("data", "01_intermediate", "personas.rds")) %>%
       universo == 4	~ "Desconocido"
     ),
     vivvo00 = ifelse(vivvo00 == 1, "Particular", "Colectiva"),
+    id_vivienda = paste(direccion_id, vivid, sep = "-"),
     
     ## Características generales
     
